@@ -2,19 +2,15 @@ services:
   - type: web
     name: erp-uae-api
     runtime: node
-    plan: starter
+    plan: free
     buildCommand: npm test
     startCommand: npm run seed && npm start
     healthCheckPath: /
-    disk:
-      name: erp-uae-data
-      mountPath: /var/data
-      sizeGB: 1
     envVars:
       - key: NODE_VERSION
         value: 22.13.0
       - key: DB_PATH
-        value: /var/data/erp.db
+        value: backend/data/erp.db
       - key: DEMO_PASSWORD
         generateValue: true
       - key: SESSION_HOURS

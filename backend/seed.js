@@ -18,7 +18,7 @@ const { createSale } = require('./services/sales');
 const { createPurchase, receivePurchase } = require('./services/purchases');
 const { recordPayment } = require('./services/payments');
 
-const DEMO_PASSWORD = 'Demo@2026';
+const DEMO_PASSWORD = process.env.DEMO_PASSWORD || 'Demo@2026';
 const daysAgo = n => { const d = new Date(); d.setUTCDate(d.getUTCDate() - n); return d.toISOString().slice(0, 10); };
 let seedState = 42;
 const rnd = () => (seedState = (seedState * 1664525 + 1013904223) % 4294967296) / 4294967296;
@@ -203,7 +203,8 @@ if (require.main === module) {
   if (seed()) {
     console.log('✅ تم إنشاء البيانات التجريبية.');
     console.log(`   المستخدمون: admin / sales1 / purchasing1 / accountant1 / warehouse1`);
-    console.log(`   كلمة المرور التجريبية لجميعهم: ${DEMO_PASSWORD}  (غيّرها فوراً قبل الاستخدام الفعلي)`);
+    if (process.env.DEMO_PASSWORD) console.log('   كلمة المرور: راجع متغير DEMO_PASSWORD في إعدادات النشر.');
+    else console.log(`   كلمة المرور التجريبية لجميعهم: ${DEMO_PASSWORD}  (غيّرها فوراً قبل الاستخدام الفعلي)`);
   }
 }
 module.exports = { seed, DEMO_PASSWORD };

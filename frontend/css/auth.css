@@ -1,0 +1,342 @@
+/* صفحات المصادقة */
+.auth-page {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-nav {
+    background-color: var(--bg-primary);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+}
+
+.auth-nav .nav-container {
+    max-width: 1400px;
+}
+
+.auth-nav .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-nav .nav-actions span {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* حاوية المصادقة */
+.auth-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(100vh - var(--header-height));
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.auth-card {
+    background-color: var(--bg-primary);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-side {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-side::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../assets/images/auth-bg.svg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+.auth-side-content {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+}
+
+/* رأس المصادقة */
+.auth-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.auth-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.auth-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* نموذج المصادقة */
+.auth-form {
+    max-width: 450px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* اختيار الدور */
+.role-selection {
+    margin: 2rem 0;
+}
+
+.role-selection p {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.role-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.role-option input[type="radio"] {
+    display: none;
+}
+
+.role-card {
+    background-color: var(--bg-secondary);
+    border: 2px solid #e9ecef;
+    border-radius: var(--border-radius);
+    padding: 1.5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.role-card i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.role-card span {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.role-option input[type="radio"]:checked + .role-card {
+    border-color: var(--secondary-color);
+    background-color: rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* تسجيل الدخول التجريبي */
+.demo-login {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.demo-login p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.demo-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* قوة كلمة المرور */
+.password-strength {
+    margin-top: 0.5rem;
+}
+
+.strength-meter {
+    height: 4px;
+    background-color: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--danger-color);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.strength-text {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* الفوائد */
+.benefits {
+    margin: 2.5rem 0;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefit-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.25rem;
+}
+
+.benefit-content h4 {
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+}
+
+.benefit-content p {
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+/* الشهادة */
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.testimonial::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: serif;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.testimonial-author strong {
+    font-size: 1.1rem;
+}
+
+.testimonial-author span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* قائمة المميزات */
+.features-list {
+    margin-top: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+/* تذييل المصادقة */
+.auth-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.auth-footer p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.back-home {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.back-home:hover {
+    color: var(--primary-color);
+}
+
+.back-home i {
+    transform: rotate(180deg);
+}
+
+/* التجاوب */
+@media (max-width: 992px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .auth-side {
+        display: none;
+    }
+    
+    .auth-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 1.5rem;
+    }
+    
+    .auth-title {
+        font-size: 2rem;
+    }
+    
+    .role-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

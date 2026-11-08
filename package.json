@@ -1,0 +1,16 @@
+{
+  "name": "uae-car-dealership-erp",
+  "version": "2.0.0",
+  "description": "نظام ERP لإدارة معرض سيارات في دولة الإمارات: مبيعات، مشتريات، مخازن، حسابات",
+  "main": "backend/server.js",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js",
+    "seed": "node backend/seed.js",
+    "reset": "node backend/seed.js --reset",
+    "test": "node backend/test.js"
+  },
+  "license": "ISC"
+}

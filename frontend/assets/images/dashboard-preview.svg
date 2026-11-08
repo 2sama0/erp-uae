@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="معاينة لوحة التحكم">
+  <rect width="640" height="400" rx="16" fill="#f4f6f8"/><rect x="0" y="0" width="150" height="400" rx="16" fill="#2c3e50"/>
+  <g fill="#fff" opacity=".85"><rect x="20" y="40" width="100" height="10" rx="5"/><rect x="20" y="70" width="80" height="8" rx="4" opacity=".6"/><rect x="20" y="95" width="90" height="8" rx="4" opacity=".6"/><rect x="20" y="120" width="70" height="8" rx="4" opacity=".6"/></g>
+  <g><rect x="170" y="30" width="140" height="70" rx="10" fill="#fff"/><rect x="325" y="30" width="140" height="70" rx="10" fill="#fff"/><rect x="480" y="30" width="140" height="70" rx="10" fill="#fff"/>
+  <rect x="185" y="48" width="60" height="8" rx="4" fill="#bdc3c7"/><rect x="185" y="68" width="90" height="14" rx="4" fill="#3498db"/><rect x="340" y="48" width="60" height="8" rx="4" fill="#bdc3c7"/><rect x="340" y="68" width="90" height="14" rx="4" fill="#2ecc71"/><rect x="495" y="48" width="60" height="8" rx="4" fill="#bdc3c7"/><rect x="495" y="68" width="90" height="14" rx="4" fill="#e67e22"/></g>
+  <rect x="170" y="120" width="450" height="250" rx="10" fill="#fff"/>
+  <g><rect x="200" y="290" width="30" height="60" fill="#3498db"/><rect x="240" y="260" width="30" height="90" fill="#e67e22"/><rect x="290" y="240" width="30" height="110" fill="#3498db"/><rect x="330" y="270" width="30" height="80" fill="#e67e22"/><rect x="380" y="210" width="30" height="140" fill="#3498db"/><rect x="420" y="230" width="30" height="120" fill="#e67e22"/><rect x="470" y="180" width="30" height="170" fill="#3498db"/><rect x="510" y="200" width="30" height="150" fill="#e67e22"/></g>
+</svg>
